@@ -7,9 +7,9 @@ total = 0
 for num in numbers:
     if num < smallest:
         smallest = num
-    if num >  largest:
+    if num > largest:
         largest = num
-    total  += num
+    total += num
 
 print(total, smallest, largest)
 # better way
