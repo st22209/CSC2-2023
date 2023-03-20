@@ -81,20 +81,22 @@ def change_mode():
 unit = tk.OptionMenu(frame, variable, *CONVERTERS.keys())
 unit.grid(row=2, column=0, columnspan=2, pady=20)
 
+frame2 = tk.Frame()
 clear_button = tk.Button(
-    frame, text="Clear", bg="#ffffff", fg="#ff0000", command=clear_callback
+    frame2, text="Clear", bg="#ffffff", fg="#ff0000", command=clear_callback
 )
-clear_button.grid(row=3, column=0, columnspan=2, pady=20)
+clear_button.grid(row=3, column=1, columnspan=2, pady=20,padx=50)
 
 convert_button = tk.Button(
-    frame, text="Convert", bg="#ffffff", fg="#ff0000", command=convert_callback
+    frame2, text="Convert", bg="#ffffff", fg="#ff0000", command=convert_callback
 )
-convert_button.grid(row=3, column=1, columnspan=2, pady=20)
+convert_button.grid(row=3, column=2, columnspan=2, pady=20,padx=50)
 
 convert_button = tk.Button(
-    frame, text="Light Mode", bg="#ffffff", fg="#ff0000", command=change_mode
+    frame2, text="Light Mode", bg="#ffffff", fg="#ff0000", command=change_mode
 )
-convert_button.grid(row=3, column=3, columnspan=2, pady=20)
+convert_button.grid(row=3, column=3, columnspan=2, pady=20, padx=50)
+frame2.pack()
 
 res_label.grid(row=6, column=0, columnspan=2, pady=10)
 
